@@ -53,9 +53,9 @@ const HeroSlider = () => {
                         className={`absolute left inset-0 transition-opacity duration-1000 ease-in-out ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
                     >
                         {slide.type === 'video' ? (
-                            <video className='h-full w-full object-cover' src={slide.src} autoPlay loop muted></video>
+                            <video className='h-[40rem] w-full object-cover' src={slide.src} autoPlay loop muted></video>
                         ) : (
-                            <img className='h-full w-full object-cover' src={slide.src} alt={`Slide ${index + 1}`} />
+                            <img className='h-[40rem] w-full object-cover' src={slide.src} alt={`Slide ${index + 1}`} />
                         )}
                     </div>
                 ))}
@@ -66,7 +66,7 @@ const HeroSlider = () => {
                 </div>
                 <button
                     onClick={handlePrev}
-                    className='absolute left-[60%] focus:bg-transparent top-[90%] focus:text-white focus:border focus:border-white transform -translate-y-1/2 bg-white text-black p-6 rounded-[50%]'
+                    className='absolute left-[50%] focus:bg-transparent top-[90%] focus:text-white focus:border focus:border-white transform -translate-y-1/2 bg-white text-black p-6 rounded-[50%]'
                 >
                     <FaArrowLeft/>
                 </button>
