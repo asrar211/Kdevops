@@ -45,7 +45,7 @@ const HeroSlider = () => {
     return (
         <>
         <hr/>
-        <div className='relative h-[45rem] overflow-hidden'>
+        <div className='relative h-[30rem] overflow-hidden'>
             <div className='relative h-full'>
                 {slides.map((slide, index) => (
                     <div
@@ -53,9 +53,9 @@ const HeroSlider = () => {
                         className={`absolute left inset-0 transition-opacity duration-1000 ease-in-out ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
                     >
                         {slide.type === 'video' ? (
-                            <video className='h-[40rem] w-full object-cover' src={slide.src} autoPlay loop muted></video>
+                            <video className='h-full w-full object-cover' src={slide.src} autoPlay loop muted></video>
                         ) : (
-                            <img className='h-[40rem] w-full object-cover' src={slide.src} alt={`Slide ${index + 1}`} />
+                            <img className='h-full w-full object-cover' src={slide.src} alt={`Slide ${index + 1}`} />
                         )}
                     </div>
                 ))}
